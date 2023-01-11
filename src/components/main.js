@@ -11,7 +11,7 @@ function main() {
                         <div className="countries_box">
                             <h3 className="countries_title">Ýerleşýän Ýeri</h3>
                             <div className="countries_item">
-                                <Link to="/">
+                                <Link  to="/">
                                     AHAL
                                     <span>342</span>
                                 </Link>
@@ -89,7 +89,7 @@ function main() {
                         </div>
 
                         <div className="advert">
-                            <img src="assets/images/gif/reklam.gif" alt="" />
+                            <img src="assets/images/gif/reklam~1.gif" alt="gif" />
                         </div>
                     </aside>
 
@@ -237,7 +237,7 @@ function main() {
                                 </div>
                             </div>
                             <div className="why_us-footer">
-                                <Link className="footer_link" to="/">
+                                <Link className="why_us-link" to="/">
                                     Hemmesi
                                     <svg width="18px" height="18px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                         <polyline fill="none" stroke="/000" stroke-width="2" points="7 2 17 12 7 22" />
@@ -249,6 +249,7 @@ function main() {
                         <h5 className="companies_title">
                             Soňky Goşulan Kompaniýalar
                         </h5>
+                        
                         <div className="companies_box">
 
                             <Link to="/" className="companies_item">
@@ -346,9 +347,9 @@ function main() {
 
                             </div>
 
-                            <div  className="modal_open">
+                            <button className="modal_open">
                                 KOMPANIÝAŇYZY GOŞUŇ
-                            </div>
+                            </button>
 
                             <div className="modal_window ">
                                 <div className="modal_box">

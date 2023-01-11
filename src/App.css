@@ -113,11 +113,25 @@ button {
 
 /* header   ======== */
 .header {
+    background-image: url('../public/assets/images/navbar_bacground.png');
+    background-position: center;
+    background-color: #fff;
+    width: 100%;
+    transition: 0.4s ease-out;
+}
+
+
+
+
+.headerFixed {
     display: block;
     background-image: url('../public/assets/images/navbar_bacground.png');
     background-position: center;
     background-color: #fff;
     width: 100%;
+    position: fixed;
+    z-index: 999;
+    box-shadow: rgb(0 0 0 / 15%) 0px 3px 6px 0px;
 }
 
 .header_box {
@@ -314,8 +328,9 @@ a.english::before {
 
 /* Hero ========== */
 .hero {
-    margin: 10px 0;
+    margin-bottom: 10px;
 }
+
 
 .hero_wrap {
     display: flex;
@@ -401,14 +416,14 @@ a.english::before {
 }
 
 .leftbar__item #more__dropdown-list {
-    
+
     background-color: #fff;
     color: #555;
     width: 300px;
 }
 
 .leftbar__item #more__dropdown-item {
-    
+
     margin-left: 10px;
 }
 
@@ -480,6 +495,88 @@ a.english::before {
     border-top: none;
     z-index: 100;
 }
+
+
+
+
+/* slick  */
+.hero .slick-prev:before, .slick-next:before {
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+    opacity: .75;
+    color: transparent;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.hero .slick-next:before {
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+    opacity: .75;
+    color: transparent;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.hero .slick-prev {
+    background-color: transparent;    
+    z-index: 1111;
+    left: 0;
+}
+
+.hero .slick-next {
+    background-color: transparent;
+  
+    display: none;    
+    right: 0;
+}
+
+.hero .slick-dots li button {
+    position: absolute;
+    bottom: 20px;
+    display: block;
+
+ 
+
+    text-align: center;
+    opacity: 1;
+
+
+}
+
+.hero .slick-dots li button:before {
+    font-family: 'slick';
+    font-size: 6px;
+    line-height: 7px;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    content: '•';
+    text-align: center;
+    opacity: .25;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: all .3s;
+}
+
+.hero .slick-dots li.slick-active button:before {
+    opacity: 1;
+    background: #fff;
+    width: 25px;
+    height: 6px;
+    border-radius: 10px;
+    color: #ffffff69;
+
+}
+
+
+/* slick end  */
+
 
 .category_image {
     position: relative;
@@ -633,8 +730,8 @@ a.english::before {
 }
 
 .countries_item a:hover {
-    background: #f3f5ffce;
-    color: #124084;
+    background: #93a1e93b;
+    color: #075cdb;
 }
 
 .business_box {
@@ -689,8 +786,13 @@ a.english::before {
 
 .companies_text {
     font-size: 14px;
-    padding-bottom: 15px;
+    margin-bottom: 15px;
     font-weight: 500;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+
 }
 
 .companies_images {
@@ -780,7 +882,7 @@ a.english::before {
     justify-content: end;
 }
 
-.footer_link {
+.why_us-link {
     display: flex;
     align-items: center;
     text-transform: uppercase;
@@ -840,7 +942,6 @@ a.english::before {
 
 /* modal */
 
-
 .modal_open {
     font-size: 14px;
     font-weight: 500;
@@ -855,6 +956,7 @@ a.english::before {
     transition: all 0.3s ease;
     box-shadow: inset 2px 2px 2px 0px rgb(255 255 255 / 50%), 7px 7px 20px 0px rgb(0 0 0 / 10%), 4px 4px 5px 0px rgb(0 0 0 / 10%);
     outline: none;
+    display: block;
 }
 
 

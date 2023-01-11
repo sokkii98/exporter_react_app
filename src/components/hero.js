@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
+import Slider from "react-slick";                                       
 
 function hero() {
 
@@ -245,7 +245,7 @@ function hero() {
                         <div id="more__item-content" className="">
                           <Link id="more__dropdown-link" to="/">
                             <img className="category_image" src="assets/images/bar_img/Egin-eşik, aýakgap.png" alt="Egin-eşik, aýakgap, aksessuwar " />
-                            Egin-eşik, aýakgap, aksessuwar
+                            Egin-eşik, aýakgap, aksessuar
                           </Link>
                          <span>17</span>
                         </div>

@@ -1,10 +1,22 @@
-import React from 'react';
+import React ,{useState} from 'react';
 import { Link } from 'react-router-dom'
 
 
-function header() {
+export default function Header() {
+
+    const [fix,setFix] = useState(false);
+    
+function setFixed(){
+    if(window.scrollY >= 392){
+        setFix(true);
+    }
+    else {
+        setFix(false);
+    }
+}
+window.addEventListener('scroll',setFixed);
   return (
-    <header className="header" id="header">
+    <header className={fix ? "headerFixed" : "header"} id="header">
         <div className="auto_container">
             <div className="header_wrap">
 
@@ -70,5 +82,3 @@ function header() {
     </header>
   )
 }
-
-export default header

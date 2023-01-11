@@ -1,8 +1,16 @@
-import React from 'react'
+import { useState } from 'react';
 import { Link } from 'react-router-dom'
+import Modal from './Modal';
 
 
-function main() {
+function Main() {
+
+    const [openModal, setOpenModal] = useState(false);
+
+    function closeModal() {
+        this.setOpenModal(false);
+    }
+
     return (
         <section className="main">
             <div className="auto_container">
@@ -11,7 +19,7 @@ function main() {
                         <div className="countries_box">
                             <h3 className="countries_title">Ýerleşýän Ýeri</h3>
                             <div className="countries_item">
-                                <Link  to="/">
+                                <Link to="/">
                                     AHAL
                                     <span>342</span>
                                 </Link>
@@ -249,7 +257,7 @@ function main() {
                         <h5 className="companies_title">
                             Soňky Goşulan Kompaniýalar
                         </h5>
-                        
+
                         <div className="companies_box">
 
                             <Link to="/" className="companies_item">
@@ -347,23 +355,29 @@ function main() {
 
                             </div>
 
-                            <button className="modal_open">
-                                KOMPANIÝAŇYZY GOŞUŇ
-                            </button>
+                            <div className="modal_open">
+                                <button className="openModalBtn"
+                                    onClick={() => {
+                                        setOpenModal(true);
+                                    }}>
+                                    KOMPANIÝAŇYZY GOŞUŇ
+                                </button>
+                                {openModal && <Modal closeModal={setOpenModal} />}
+                            </div>
 
-                            <div className="modal_window ">
+                            {/* <div className="modal_window ">
                                 <div className="modal_box">
 
                                     <div className="modal-header">
                                         <h5 className="modal-title" id="staticBackdropLabel">Kompaniýaňyzy goşuň</h5>
-                                        <span className="modal_close">
+                                        <button onClick={() => closeModal(false)} className="modal_close">
                                             <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" role="img"
                                                 aria-hidden="true">
                                                 <path
                                                     d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
                                                     clip-rule="evenodd" fill-rule="evenodd"></path>
                                             </svg>
-                                        </span>
+                                        </button>
 
                                         <form className="" method="POST" action="/companies/request/">
                                             <input type="hidden" name="csrfmiddlewaretoken"
@@ -405,14 +419,14 @@ function main() {
 
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
 
                     </div>
                 </div>
             </div>
         </section >
-    )
+    );
 }
 
-export default main
+export default Main

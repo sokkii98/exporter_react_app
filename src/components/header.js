@@ -19,7 +19,7 @@ window.addEventListener('scroll',setFixed);
     <header className={fix ? "headerFixed" : "header"} id="header">
         <div className="auto_container">
             <div className="header_wrap">
-
+ 
                 <div className="header_box">
                     <Link to="/" className="header_logo">
                         <img src="assets/images/logo-ny.png" alt="logo" />

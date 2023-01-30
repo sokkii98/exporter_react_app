@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react';    
 import { Link } from 'react-router-dom'
 
 
@@ -7,7 +7,7 @@ export default function Header() {
     const [fix, setFix] = useState(false);
 
     function setFixed() {
-        if (window.scrollY >= 392) {
+        if (window.scrollY >= 292) {
             setFix(true);
         }
         else {

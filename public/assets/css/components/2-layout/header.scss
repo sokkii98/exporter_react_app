@@ -1,0 +1,179 @@
+// Header ====================
+.Header {
+    background: #fff;
+    padding: 15px 0;
+
+    &_wrap {
+        display: flex;
+        align-items: center;
+    }
+
+    .Logo {
+        width: 300px;
+        height: 80px;
+        display: block;
+        position: relative;
+
+        img {
+            @include ImgCon;
+        }
+    }
+
+    &_search {
+        margin: 0 40px;
+        position: relative;
+
+        display: flex;
+        align-items: center;
+        border: 1px solid $yellow;
+        max-width: 600px;
+        width: calc(100% - 80px);
+
+        select {
+            padding: 5px 10px;
+            border-right: 1px solid #cecece;
+        }
+
+        &-input {
+            display: block;
+            width: 100%;
+
+            input {
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 1.4;
+                padding: 5px 10px;
+                width: calc(100% - 20px);
+
+                &::placeholder {
+                    color: rgba(0, 0, 0, .5);
+                }
+
+                &:focus {
+                    &::placeholder {
+                        color: #000;
+                    }
+                }
+            }
+        }
+
+        button {
+            display: block;
+            padding: 5px 20px;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.4;
+            background: $yellow;
+            cursor: pointer;
+        }
+    }
+
+    .Nav {
+        ul {
+            display: flex;
+            align-items: center;
+        }
+
+        li {
+            margin-right: 20px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        a {
+            display: block;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 1.4;
+        }
+    }
+
+    .Lang {
+        margin-left: 20px;
+        display: block;
+        position: relative;
+
+        &_current {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.4;
+            border: 2px solid $yellow;
+            padding: 5px 15px;
+            cursor: pointer;
+
+            display: flex;
+            align-items: center;
+
+            span {
+                display: block;
+                margin-right: 10px;
+                width: 15px;
+                height: 15px;
+
+                img {
+                    @include ImgCon;
+                }
+            }
+        }
+
+        &_box {
+            display: block;
+            position: absolute;
+            top: calc(100% + 10px);
+            background: #fff;
+            white-space: nowrap;
+            border: 2px solid $yellow;
+
+            opacity: 0;
+            pointer-events: none;
+            z-index: -10;
+            @include transition;
+
+            &.active {
+                opacity: 1;
+                pointer-events: unset;
+                z-index: 10;
+            }
+        }
+
+        &_item {
+            padding: 7px 15px;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.4;
+            padding: 5px 15px;
+            display: flex;
+            align-items: center;
+            @include transition;
+
+            &:hover {
+                background-color: rgba(230, 236, 242, 0.5);
+            }
+
+            span {
+                display: block;
+                margin-right: 10px;
+                width: 15px;
+                height: 15px;
+
+                img {
+                    @include ImgCon;
+                }
+            }
+        }
+    }
+}
+
+@keyframes lang {
+    0% {
+        top: calc(100% + 25px);
+    }
+
+    100% {
+        top: calc(100% + 10px);
+    }
+}
+
+// Header end ================

@@ -1,0 +1,17 @@
+.Post_wrap {
+  background: #fff;
+}
+.Post_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.Post_info {
+  width: calc(60% - 10px);
+}
+.Post_photo {
+  width: calc(40% - 10px);
+}

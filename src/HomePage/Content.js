@@ -2,9 +2,18 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 
 import '../FUllCSS/full.css'
+import Modal from './Modal';
 
 
 export default class Content extends Component {
+
+    constructor(props){
+        super(props);
+        this.state = {
+            isModal:false,
+        }
+    }
+
   render() {
     return (
         <section className="Cnt">
@@ -441,10 +450,12 @@ export default class Content extends Component {
                             </div>
                         </div>
 
-                        <button className="Add_btn">
+                        <button onClick={()=>{this.setState({isModal:true})}} className="Add_btn">
                             Kompaniýaňyzy goşuň
                         </button>
-
+                        {
+                            this.state.isModal ? <Modal closeModal={()=>{this.setState({isModal:false})}}/> : console.log('nul')
+                        }
                         
                     </div>
                 </div>

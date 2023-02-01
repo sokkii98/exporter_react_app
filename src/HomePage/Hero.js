@@ -209,21 +209,21 @@ export default class Hero extends Component {
 
               <div className="Hero_slider-box">
                 <Slider {...settings}>
-                  <div className="Hero_slider-item">
-                    <img src="/assets/images/hero-slider-1.png" alt="slider-img" />
-                  </div>
+                  <Link  to="/post" className="Hero_slider-item">
+                    <img src="/assets/images/hero-slider-1.png" alt="slider" />
+                  </Link>
 
-                  <div className="Hero_slider-item">
-                    <img src="assets/images/hero-slider-2.png" alt="slider-img" />
-                  </div>
+                  <Link to="/post" className="Hero_slider-item">
+                    <img src="assets/images/hero-slider-2.png" alt="slider" />
+                  </Link>
 
-                  <div className="Hero_slider-item">
-                    <img src="assets/images/hero-slider-1.png" alt="slider-img" />
-                  </div>
+                  <Link to="/post" className="Hero_slider-item">
+                    <img src="assets/images/hero-slider-1.png" alt="slider" />
+                  </Link>
 
-                  <div className="Hero_slider-item">
-                    <img src="assets/images/hero-slider-2.png" alt="slider-img" />
-                  </div>
+                  <Link to="/post" className="Hero_slider-item">
+                    <img src="assets/images/hero-slider-2.png" alt="slider" />
+                  </Link>
 
                 </Slider>
 

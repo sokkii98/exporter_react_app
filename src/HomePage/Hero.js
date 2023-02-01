@@ -30,7 +30,7 @@ export default class Hero extends Component {
 
               <ul className="Hero_aside-list">
                 <li>
-                  <Link to="/" className="Hero_aside-item">
+                  <Link to="/category" className="Hero_aside-item">
                     <div className="Hero_aside-group">
                       <span className="Hero_aside-icon">
                         <img src="assets/images/aside-icon-1.png" alt="icon" />
